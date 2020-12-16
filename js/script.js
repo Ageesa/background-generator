@@ -1,13 +1,11 @@
-function newColor(){
-    var colorNow=  getRandomColorChannel()
-     document.body.style.backgroundColor = colorNow;
-  document.getElementById(`msg`).innerHTML = colorNow;
-}
 
 function getRandomColorChannel() {
     var r = Math.floor(Math.random() * 256);
     var g = Math.floor(Math.random() * 256);
     var b = Math.floor(Math.random() * 256);
     var bgColor = `rgb(${r},${g},${b})`;
-    return bgColor
-    }
+    document.body.style.backgroundColor = bgColor;
+  document.getElementById(`msg`).innerHTML = bgColor;
+}
+    
+    document.querySelector('button').addEventListener('click', getRandomColorChannel)
